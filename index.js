@@ -54,7 +54,7 @@ async function CloseClick(){
     square1Direction = "down";
     square2Direction = "right";
     clearInterval(intervalId);
-    await fetch('http://localhost:5253/api/get')
+    await fetch('https://lr7-web-api.onrender.com/api/get')
         .then(response => response.json())
         .then(records => {
             console.log(records);
@@ -270,7 +270,7 @@ async function RestartClick(){
 }
 
 async function SaveRecord(message) {
-    fetch('http://localhost:5253/api/save', {
+    fetch('https://lr7-web-api.onrender.com/api/save', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
